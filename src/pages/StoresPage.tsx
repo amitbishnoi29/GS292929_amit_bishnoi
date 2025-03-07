@@ -7,7 +7,7 @@ import { Pencil, Trash2 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store';
-import { Store, updateStore, deleteStore } from '../store/storesSlice';
+import { Store, updateStore, deleteStore, reorderStores } from '../store/storesSlice';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogFooter } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
@@ -57,7 +57,23 @@ export default function StoresPage() {
     <div className="space-y-6">
       <h1 className="text-2xl font-bold text-gray-900">Stores Management</h1>
       <div className="ag-theme-alpine w-full h-[600px]">
-        <AgGridReact rowData={stores} columnDefs={columnDefs} animateRows={true} />
+        <AgGridReact rowData={stores} columnDefs={columnDefs} animateRows={true}
+            rowDragManaged={true} 
+            onRowDragEnd={(event) => {
+            const newStores = [...stores];
+            const [draggedNode] = event.node ? [event.node] : [];
+            if (draggedNode) {
+              const fromIndex = stores.findIndex(store => store.seqNo === draggedNode?.data?.seqNo);
+              const toIndex = event.overIndex ?? 0;
+              const [removed] = newStores.splice(fromIndex, 1);
+              newStores.splice(toIndex, 0, removed);
+              newStores.forEach((store, index) => {
+                store.seqNo = index + 1;
+              });
+              dispatch(reorderStores(newStores));
+            }
+          }}  
+        />
       </div>
       
       {/* Edit Store Modal */}
