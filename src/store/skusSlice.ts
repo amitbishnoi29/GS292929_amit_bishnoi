@@ -37,7 +37,7 @@ const skusSlice = createSlice({
     deleteSku: (state, action: PayloadAction<string>) => {
       return state.filter(sku => sku.id !== action.payload);
     },
-    reorderSkus: (state, action: PayloadAction<SKU[]>) => {
+    reorderSkus: (_, action: PayloadAction<SKU[]>) => {
       return action.payload;
     }
   }

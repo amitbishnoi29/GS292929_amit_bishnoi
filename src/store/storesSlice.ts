@@ -47,7 +47,7 @@ const storesSlice = createSlice({
     deleteStore: (state, action: PayloadAction<string>) => {
       return state.filter(store => store.id !== action.payload);
     },
-    reorderStores: (state, action: PayloadAction<Store[]>) => {
+    reorderStores: (_, action: PayloadAction<Store[]>) => {
       return action.payload;
     }
   }
