@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
-import { Store, LayoutGrid, Package, LineChart, Menu, LogOut, UserCircle } from 'lucide-react';
-import { ClerkProvider, SignIn, SignUp, useAuth, useClerk, useUser } from '@clerk/clerk-react';
+import { Store, LayoutGrid, Package, LineChart, LogOut, UserCircle } from 'lucide-react';
+import { ClerkProvider, SignUp, useAuth, useClerk, useUser } from '@clerk/clerk-react';
 import StoresPage from './pages/StoresPage';
 import SkusPage from './pages/SkusPage';
 import PlanningPage from './pages/PlanningPage';
