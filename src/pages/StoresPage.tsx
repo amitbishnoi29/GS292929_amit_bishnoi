@@ -43,8 +43,8 @@ export default function StoresPage() {
         headerName: 'Actions',
         cellRenderer: (params: any) => (
           <div className="flex mt-2 items-center justify-center space-x-4">
-            <Pencil size={18} className="cursor-pointer" onClick={() => setEditStore(params.data)} />
-            <Trash2 size={18} className="cursor-pointer" onClick={() => setStoreToDelete(params.data)} />
+            <Pencil size={18} data-testid="edit-button" className="cursor-pointer" onClick={() => setEditStore(params.data)} />
+            <Trash2 size={18} data-testid="delete-button" className="cursor-pointer" onClick={() => setStoreToDelete(params.data)} />
           </div>
         ),
         width: 120,

@@ -5,14 +5,12 @@ const config: Config = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   moduleNameMapper: {
-    '\\.(css|scss|sass)$': 'identity-obj-proxy'
+    "\\.(css|scss|sass)$": "identity-obj-proxy",
+    "^@/(.*)$": "<rootDir>/src/$1" 
   },
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    "^.+\\.tsx?$": "ts-jest"
   },
-//   moduleNameMapper: {
-//     "\\.(css|scss|sass)$": "identity-obj-proxy" // Mock CSS imports
-//   }
 };
 
 export default config;
