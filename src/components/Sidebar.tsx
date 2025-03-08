@@ -7,7 +7,7 @@ const Sidebar = () => {
     const isActive = (path: string) => location.pathname === path;
     
     return (
-      <div className="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-white border-r border-gray-200 p-4">
+      <div className="fixed left-0 top-16 h-[calc(100vh-4rem)] w-48 bg-white border-r border-gray-200 p-4">
         <nav className="space-y-2">
           {[
             { path: '/stores', icon: Store, label: 'Stores' },
