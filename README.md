@@ -31,8 +31,8 @@ Check out the live version: **https://react-data-viewer.vercel.app/**
 ## 🛠 Installation
 
 ```sh
-git clone https://github.com/amitbishnoi29/react-data-viewer.git
-cd react-data-viewer
+git clone https://github.com/amitbishnoi29/GS292929_amit_bishnoi.git
+cd GS292929_amit_bishnoi
 npm install
 npm run dev
 ```
