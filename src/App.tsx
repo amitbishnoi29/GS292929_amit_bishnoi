@@ -8,6 +8,7 @@ import ChartPage from './pages/Chartpage';
 import LoginPage from './pages/LoginPage';
 import Layout from './components/Layout';
 import SignUpRoute from './components/SignUp';
+import NotFound from './pages/NotFound';
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")
@@ -83,6 +84,7 @@ export default function App() {
                 </ProtectedRoute>
               }
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
       </Router>
