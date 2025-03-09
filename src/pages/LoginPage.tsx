@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSignIn } from '@clerk/clerk-react';
-import { Store } from 'lucide-react';
+import Logo from '../assets/logo.svg';
 
 export default function LoginPage() {
   const { isLoaded, signIn, setActive } = useSignIn();
@@ -45,15 +45,12 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="flex justify-center">
-          <Store className="text-blue-600" size={48} />
-        </div>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Sign in to Store Manager
+        <h2 className="mt-6 text-center text-2xl text-gray-900">
+          Sign in to <img src={Logo} alt="logo" className='w-25 inline' />
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           Or{' '}
-          <a href="/sign-up" className="font-medium text-blue-600 hover:text-blue-500">
+          <a href="/sign-up" className=" cursor-pointer font-medium text-blue-600 hover:text-blue-500">
             create a new account
           </a>
         </p>
