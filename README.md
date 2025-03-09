@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+# React Data Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+React Data Viewer is a modern web application that allows users to view, manage, and interact with data efficiently. It is built using React and leverages the power of state management and UI libraries to provide a seamless experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+Check out the live version: **React Data Viewer**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- 📊 **Data Grid** - View and manipulate structured data with ease.
+- 🔄 **Sorting & Filtering** - Quickly sort and filter data based on specific conditions.
+- 🖊 **Edit & Delete** - Modify or remove records dynamically.
+- ➕ **Add New Records** - Insert new data seamlessly with an intuitive UI.
+- 🎨 **Modern UI** - Styled using Tailwind CSS and ShadCN components.
+- 🚀 **Optimized Performance** - Fast and smooth user interactions.
+
+## 📦 Tech Stack
+
+- React.js
+- TypeScript
+- Redux Toolkit
+- Ag-Grid
+- Tailwind CSS
+- ShadCN UI
+- Lucide Icons
+- Vercel (Hosting)
+
+## 🛠 Installation
+
+```sh
+git clone https://github.com/amitbishnoi29/react-data-viewer.git
+cd react-data-viewer
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Start the development server
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Build for production
+npm run build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Run tests
+npm run test
+
+## Folder Structure
+/src
+ ├── components  # Reusable UI components
+ ├── pages       # Application pages
+ ├── store       # Redux state management
+ ├── assets      # Static assets like images and icons
+ ├── App.tsx     # Main application entry
+ ├── main.tsx    # Root React entry file
