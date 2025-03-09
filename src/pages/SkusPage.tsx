@@ -92,16 +92,16 @@ export default function SkusPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-gray-900">SKUs Management</h1>
-        <button
+        <Button
           onClick={() => {
             setEditSku(null);
             setIsModalOpen(true);
           }}
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center space-x-2 px-4 py-2 cursor-pointer"
         >
           <Plus size={20} />
           <span>Add SKU</span>
-        </button>
+        </Button>
       </div>
       
       <div className="bg-white rounded-lg shadow-md p-6">
