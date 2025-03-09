@@ -17,7 +17,7 @@ function Header() {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-gray-700">
               <UserCircle size={20} />
-              <span>{user?.emailAddresses[0]?.emailAddress}</span>11
+              <span>{user?.emailAddresses[0]?.emailAddress}</span>
             </div>
             <button
               onClick={() => signOut()}
