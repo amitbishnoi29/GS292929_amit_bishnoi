@@ -6,7 +6,7 @@ React Data Viewer is a modern web application that allows users to view, manage,
 
 ## 🚀 Live Demo
 
-Check out the live version: **React Data Viewer**
+Check out the live version: **https://react-data-viewer.vercel.app/**
 
 ## Features
 
@@ -46,11 +46,3 @@ npm run build
 # Run tests
 npm run test
 
-## Folder Structure
-/src
- ├── components  # Reusable UI components
- ├── pages       # Application pages
- ├── store       # Redux state management
- ├── assets      # Static assets like images and icons
- ├── App.tsx     # Main application entry
- ├── main.tsx    # Root React entry file
